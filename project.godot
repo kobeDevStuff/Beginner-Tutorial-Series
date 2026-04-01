@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tutorial Series"
-run/main_scene="uid://0b01aou2bte6"
+run/main_scene="uid://d3303igy2kwnc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -45,6 +45,7 @@ right={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

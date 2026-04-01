@@ -1,5 +1,5 @@
 extends RigidBody2D
-
+class_name PhysicsPlayer
 ## Author: Kobe Della Favory
 ## Updated: 18/03/26
 

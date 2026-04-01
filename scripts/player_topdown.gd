@@ -19,13 +19,14 @@ func get_input() -> Vector2:
 	direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	return direction.normalized()
 
-# Called every frame
-func _process(delta: float) -> void:
+# Called every physics frame
+func _physics_process(delta: float) -> void:
 	var player_input: Vector2 = get_input()
 	
 	# SPEED is the magnitude of our velocity
 	# ACCEL * delta is our acceleration of the character
 	# we multiply by delta in order to account for variable frame rates on different monitors
 	velocity = lerp(velocity, player_input * SPEED, ACCEL * delta) # lineraly interpolate the current velocity to the target velocity to acheive a smooth effect
+	move_and_slide() # call move_and_slide in physics process
+	# If your character jitters, make sure to go to Project -> Project settings -> Physics -> Common -> Enable physics interpolation
 	
-	move_and_slide() # Finally, call move and slide LAST!

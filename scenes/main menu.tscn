@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://d3303igy2kwnc"]
+
+[ext_resource type="Script" uid="uid://bi3nnx6xuuyf1" path="res://scripts/main_menu.gd" id="1_12vek"]
+[ext_resource type="Texture2D" uid="uid://ctokclfqcrdf5" path="res://assets/bkg.png" id="1_xsilq"]
+[ext_resource type="Theme" uid="uid://6a8fcr0fm4u7" path="res://assets/our_theme.tres" id="2_12vek"]
+[ext_resource type="Script" uid="uid://t7xbyd73k81e" path="res://scripts/testing_signals.gd" id="4_vsw8r"]
+
+[node name="Node" type="Node" unique_id=731275753]
+script = ExtResource("1_12vek")
+
+[node name="Control" type="Control" parent="." unique_id=1809669462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1664266207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xsilq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=298413578]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.48235294, 0.5176471, 0.5411765, 0.49411765)
+
+[node name="Label" type="Label" parent="Control" unique_id=1798108754]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -396.0
+offset_top = 46.0
+offset_right = 396.0
+offset_bottom = 211.0
+grow_horizontal = 2
+theme = ExtResource("2_12vek")
+text = "My first game"
+
+[node name="Play" type="Button" parent="Control" unique_id=1665115047]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = -221.0
+offset_right = 331.0
+offset_bottom = -144.0
+grow_vertical = 0
+theme = ExtResource("2_12vek")
+text = "Play"
+
+[node name="Quit" type="Button" parent="Control" unique_id=259284216]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = -124.0
+offset_right = 331.0
+offset_bottom = -47.0
+grow_vertical = 0
+theme = ExtResource("2_12vek")
+text = "Quit"
+
+[node name="Node" type="Node" parent="." unique_id=84649981]
+script = ExtResource("4_vsw8r")
+
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
