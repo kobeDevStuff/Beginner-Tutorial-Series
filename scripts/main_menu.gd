@@ -1,4 +1,7 @@
 extends Node
+## Author: Kobe Della Favory
+## Updated: 13/05/26
+
 class_name MainMenu
 signal transition # Making a custom signal
 

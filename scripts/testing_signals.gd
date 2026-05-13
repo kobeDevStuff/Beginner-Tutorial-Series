@@ -1,5 +1,6 @@
 extends Node
-
+## Author: Kobe Della Favory
+## Updated: 13/05/26
 
 func _ready() -> void:
 	var parent : MainMenu = get_parent() # Getting the node we are listening to
